@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .stack {
+        @apply relative
+
+            transition-transform
+            hover:scale-103
+
+            before:absolute
+            before:z-40
+            before:bottom-7
+            before:translate-y-full
+            before:left-0
+            before:w-full
+            before:bg-red-200
+            before:scale-85
+            before:p-4
+            before:bg-white
+            before:border
+            before:rounded-lg
+            before:select-none
+
+            after:absolute
+            after:z-30
+            after:bottom-6
+            after:translate-y-full
+            after:left-0
+            after:w-full
+            after:bg-red-200
+            after:p-4
+            after:bg-white
+            after:border
+            after:rounded-lg
+            after:select-none
+            after:scale-80
+        ;
+    }
+
+    .tab-item {
+        @apply
+            px-4
+            py-2
+
+            inline-block
+            select-none
+            cursor-pointer
+
+            hover:bg-white
+            hover:text-sky-600
+            hover:rounded-tl-lg
+            hover:rounded-tr-lg
+        ;
+    }
+
+    .tab-item.active {
+        @apply
+            rounded-tl-lg
+            rounded-tr-lg
+            shadow-lg
+
+            bg-white
+            text-sky-600
+        ;
+    }
+
+    .text-shadow {
+        text-shadow: 0 1px 1px rgba(255, 255, 255, .16);
+    }
+}
